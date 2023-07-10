@@ -138,7 +138,7 @@ export async function authenticUser() {
 }
 
 export async function editPost(id, body) {
-  const token = JSON.parse(localStorage.getItem("@petInfo:token")).token;
+  const token = localStorage.getItem("@petInfo:token");
   const post = await fetch(`${baseUrl}/posts/${id}`, {
     method: "PATCH",
     body: JSON.stringify(body),

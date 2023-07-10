@@ -45,45 +45,27 @@ export const authenticUserId = () => {
   return userId;
 };
 
-// const modalEditPost = () => {
-//   const buttonSave = document.querySelector(
-//     ".containerButtonsHeader__buttonEditPost"
-//   );
-//   const modalContainer = document.querySelector(".modalContainerEdit");
 
-//   buttonSave.addEventListener("click", () => {
-//     modalContainer.showModal();
-//   });
-// };
+function addEventModalEditSaveButton(id, body) {
+  const button = document.querySelector(".containerRedirectEdit__save");
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   modalEditPost();
-// });
+  button.addEventListener("click", async () => {
+    const inputTitle = document.querySelector(
+      ".containerContentEdit__inputTitle"
+    );
+    const inputContent = document.querySelector(
+      ".containerContentEdit__inputContent"
+    );
 
-// function addEventModalEditSaveButton(id, body) {
-//   const button = document.querySelector(".containerRedirectEdit__save");
+    id = button.dataset.id;
 
-//   button.addEventListener("click", async () => {
-//     const inputTitle = document.querySelector(
-//       ".containerContentEdit__inputTitle"
-//     );
-//     const inputContent = document.querySelector(
-//       ".containerContentEdit__inputContent"
-//     );
-
-//     id = button.dataset.id;
-
-//     body = {
-//       title: inputTitle.value,
-//       content: inputContent.value,
-//     };
-//    await editPost(id, body);
-//   });
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   addEventModalEditSaveButton();
-// });
+    body = {
+      title: inputTitle.value,
+      content: inputContent.value,
+    };
+   await editPost(id, body);
+  });
+}
 
 const buttonLogout = () => {
   const button = document.querySelector(".modalContainerLogout");
@@ -101,5 +83,6 @@ const buttonLogout = () => {
 };
 
 buttonLogout();
+addEventModalEditSaveButton();
 createInPost();
 // renderPosts();
