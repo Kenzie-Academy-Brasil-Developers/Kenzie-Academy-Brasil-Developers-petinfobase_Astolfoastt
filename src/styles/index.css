@@ -95,13 +95,11 @@
 }
 
 @media screen and (max-width: 1100px) {
-
-    .container {
+  .container {
     display: flex;
     flex-direction: column;
     max-width: 80%;
     margin-left: 65px;
-
   }
   .containerLogin {
     max-width: 100%;

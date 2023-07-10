@@ -1,95 +1,92 @@
 .modalContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .modalContainer__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
 }
 
 .modalContainer__header > h2 {
-    color: var(--gray100);
-    font-weight: 500;
-    font-size: 1.10rem;
+  color: var(--gray100);
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .modalContainer__header > button {
-    color: var(--gray400);
-    border: none;
-    border-radius: 5px;
-    width: 40px;
-    cursor: pointer; 
-} 
+  color: var(--gray400);
+  border: none;
+  border-radius: 5px;
+  width: 40px;
+  cursor: pointer;
+}
 
 .modalContainer__formCreatePost {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .modalContainer__formCreatePost > h3 {
-    color: var(--gray100);
-    font-weight: 500;
-    font-size: 1rem;
+  color: var(--gray100);
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-.inputsCreate{
-   border: 1px solid var(--gray600);
-   border-radius: 4px;
-   height: 48px; 
+.inputsCreate {
+  border: 1px solid var(--gray600);
+  border-radius: 4px;
+  height: 48px;
 }
-
 
 .modalContainer__redirectButtons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 .containerHeader__createPostButton {
-    height: 50px;
+  height: 50px;
 }
 
 .buttonLogout {
-    width: 41px;
-    height: 41px;
-    border-radius: 50%;
-    border: 2px solid var(--brand100);
-    
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: 2px solid var(--brand100);
 }
 
 .modalControllerLogout {
-    margin-right: 1%;
-    bottom: 80%;  
-    left: 30%;
-    width: 200px;
-    animation: modalEffectOpen 0.5s ease-in-out forwards;
+  margin-right: 1%;
+  bottom: 80%;
+  left: 30%;
+  width: 200px;
+  animation: modalEffectOpen 0.5s ease-in-out forwards;
 }
 
 @keyframes modalEffectOpen {
-
-    0%{
-        transform: translateY(-100%);
-    }
-    100% {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
     transform: translateX(-1%);
-    }
+  }
 }
 
 .modalContainerLogout {
-    width: 100%;
+  width: 100%;
 }
 
 .nameUserLogout {
-    color: var(--gray100);
-    font-weight: 500;
-    font-size: 1.25rem;
-    margin-top: 10px;
+  color: var(--gray100);
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-top: 10px;
 }
 .modal-show {
-    display: block;
-  }
+  display: block;
+}

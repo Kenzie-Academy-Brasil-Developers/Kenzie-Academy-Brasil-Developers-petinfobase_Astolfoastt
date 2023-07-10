@@ -28,7 +28,6 @@ button {
 .confirm__button {
   background-color: var(--brand100);
   color: var(--gray900);
-
 }
 
 .confirm__button:hover {

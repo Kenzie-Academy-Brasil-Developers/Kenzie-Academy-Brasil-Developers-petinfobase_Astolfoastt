@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   modalEditPost();
 });
 
-function addEventModalEditSaveButton(id, body) {
+function addEventModalSave(id, body) {
   const button = document.querySelector(".containerRedirectEdit__save");
 
   button.addEventListener("click", async () => {
@@ -83,7 +83,7 @@ function addEventModalEditSaveButton(id, body) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  addEventModalEditSaveButton();
+  addEventModalSave();
 });
 
 const buttonLogout = () => {

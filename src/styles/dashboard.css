@@ -1,131 +1,125 @@
 .containerHeaderButtons {
-    max-width: 50rem;
+  max-width: 50rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10%;
   margin-top: 5%;
- 
 }
 .containerHeader__logo {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .ContainerTitleFeed {
-    font-size: 0.90rem;
-    max-width: 50rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 50px;
-    background-color: var(--gray700);
-    border-radius: 8px;
+  font-size: 0.9rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 50px;
+  background-color: var(--gray700);
+  border-radius: 8px;
 }
 
 .containerContent__titlePost > p {
-
-    font-size: 0.90rem;
-    margin: 3%;
-    max-width: 50rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    background-color: var(--gray700);
-    height: 50px;
+  font-size: 0.9rem;
+  margin: 3%;
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: var(--gray700);
+  height: 50px;
 }
 
 .containerList {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-
-
 .containerHeader {
-    display: flex;
-    justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
 }
 
 .containerProfile {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .containerButtonsHeader {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 25px;
 }
 
 .containerPost__cardDate {
-    color: var(--gray400);
-    font-size: 1rem;
-  }
-  
-  .containerPost__imageProfile {
-    width: 50px;
-    border-radius: 50%;
-  }
-  
-  .containerButtonsHeader {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .containerButtonsHeader > button {
-    width: 120px;
-    height: 50px;
+  color: var(--gray400);
+  font-size: 1rem;
 }
-  
-  .containerButtonsHeader__buttonEditPost {
-    background-color: var(--gray700);
-    color: var(--gray400);
-  }
-  
-  .containerButtonsHeader__buttonClearPost {
-    background-color: var(--gray700);
-    color: var(--gray400);
-  }
-  
-  .containerButtonsHeader__buttonEditPost:hover {
-    background-color: transparent;
-    color: var(--gray100);
-  }
-  
-  .containerButtonsHeader__buttonClearPost:hover {
-    background-color: transparent;
-    color: var(--gray100);
-  }
-  
-  .containerContent {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-  
-  .containerContent__titlePost {
-    color: var(--gray100);
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .containerContent__contentPost {
-    color: var(--gray400);
-    font-weight: 400;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-  
+
+.containerPost__imageProfile {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.containerButtonsHeader {
+  display: flex;
+  gap: 20px;
+}
+
+.containerButtonsHeader > button {
+  width: 120px;
+  height: 50px;
+}
+
+.containerButtonsHeader__buttonEditPost {
+  background-color: var(--gray700);
+  color: var(--gray400);
+}
+
+.containerButtonsHeader__buttonClearPost {
+  background-color: var(--gray700);
+  color: var(--gray400);
+}
+
+.containerButtonsHeader__buttonEditPost:hover {
+  background-color: transparent;
+  color: var(--gray100);
+}
+
+.containerButtonsHeader__buttonClearPost:hover {
+  background-color: transparent;
+  color: var(--gray100);
+}
+
+.containerContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.containerContent__titlePost {
+  color: var(--gray100);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.containerContent__contentPost {
+  color: var(--gray400);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
