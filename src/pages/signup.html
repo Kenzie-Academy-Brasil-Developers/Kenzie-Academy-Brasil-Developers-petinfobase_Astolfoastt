@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" href="../styles/buttons.css" />
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Petinfo Cadastro</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="containerSignup">
+        <div class="containerSignup__header">
+          <h1>Cadastro</h1>
+          <button class="close-cancel__button">Voltar para o login</button>
+        </div>
+        <h3 class="containerSignup__titleInput">Usuário</h3>
+        <input
+          class="inputs"
+          type="text"
+          name="username"
+          placeholder="Digite seu usuário aqui"
+        />
+        <h3 class="containerSignup__titleInput">Email</h3>
+        <input
+          class="inputs"
+          type="email"
+          name="email"
+          placeholder="Digite seu email aqui"
+        />
+        <h3 class="containerSignup__titleInput">Senha</h3>
+        <input
+          class="inputs"
+          type="password"
+          name="password"
+          placeholder="Digite sua senha aqui"
+        />
+        <h3 class="containerSignup__titleInput">Link da foto do perfil</h3>
+        <input
+          class="inputs"
+          type="string"
+          name="avatar"
+          placeholder="Coloque o link da sua foto de perfil aqui"
+        />
+        <div class="containerSignup__buttons">
+          <button class="confirm__button button__signup">Cadastrar</button>
+          <button class="close-cancel__button returnButtonLogin">Voltar para o login</button>
+        </div>
+      </section>
+      <section class="containerPetinfo">
+        <h1>Petinfo</h1>
+        <h2>Ooooooba!</h2>
+        <p>
+          Agora vamos poder contribuir para o bem estar do seu pet por meio do
+          conhecimento
+        </p>
+        <img
+          class="containerSignup__imgPetinfo"
+          src="../assets/img-register.png"
+          alt="imageSignup"
+        />
+      </section>
+    </main>
+    <script type="module" src="../scripts/signup.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="../scripts/requests.js"></script>
+  </body>
+</html>

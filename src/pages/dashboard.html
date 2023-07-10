@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" href="../styles/buttons.css" />
+    <link rel="stylesheet" href="../styles/dashboard.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Petinfo</title>
+  </head>
+  <body>
+    <header class="containerHeaderButtons">
+      <h1 class="containerHeader__logo">Petinfo</h1>
+      <div>
+        <button class="containerHeader__createPostButton confirm__button">
+          Criar publicação
+        </button>
+        <button class="buttonLogout"></button>
+        <dialog class="modalController">
+          <div class="modalContainer">
+            <div class="modalContainer__header">
+              <h2>Criando novo post</h2>
+              <button class="modalContainer__buttonClose">x</button>
+            </div>
+            <div class="modalContainer__formCreatePost">
+              <h3>Título do post</h3>
+              <input
+                class="inputsCreate"
+                name="title"
+                type="text"
+                placeholder="Digite o título aqui..."
+              />
+              <h3>Conteúdo do post</h3>
+              <input
+                class="inputsCreate"
+                name="content"
+                type="text"
+                placeholder="Digite o conteúdo do post aqui..."
+              />
+            </div>
+            <div class="modalContainer__redirectButtons">
+              <button class="close-cancel__button">Cancelar</button>
+              <button class="confirm__button button__signup">Publicar</button>
+            </div>
+          </div>
+        </dialog>
+        <div class="containerLogout"></div>
+      </div>
+      <dialog class="modalControllerLogout modalEffectOpen">
+        <div class="containerLogout">
+          <button class="modalContainerLogout">
+            <img src="../assets/img-logout.png" alt="imageLogout" />
+          </button>
+        </div>
+      </dialog>
+    </header>
+    <div class="ContainerTitleFeed">
+      <h3>Feed</h3>
+    </div>
+    <main class="container">
+      <ul class="container__itemList"></ul>
+    </main>
+    <dialog class="modalContainerEdit">
+      <div class="containerHeader">
+        <h2 class="containerHeader__title">Edição</h2>
+        <button class="containerHeader__buttonClose">x</button>
+      </div>
+      <div class="containerContentEdit">
+        <h3 class="containerContentEdit__title">Título do post</h3>
+        <input class="containerContentEdit__inputTitle" type="text" name="title">
+        <h3 class="containerContentEdit__title">Conteúdo do post</h3>
+        <input class="containerContentEdit__inputContent" type="text" name="content">
+      </div>
+      <div class="containerRedirectEdit">
+        <button class="containerRedirectEdit__cancel">Cancelar</button>
+        <button id="button-save" class="containerRedirectEdit__save">Salvar alterações</button>
+      </div>
+    </dialog>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="../scripts/requests.js"></script>
+    <script type="module" src="../scripts/modal.js"></script>
+    <script type="module" src="../scripts/dashboard.js"></script>
+    <script type="module" src="../scripts/render.js"></script>
+  </body>
+</html>

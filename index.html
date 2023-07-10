@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>PetInfo</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="containerInfo">
+        <h1 class="containerInfo__logo">Petinfo</h1>
+        <h3 class="containerInfo__title">
+          <span>Amor</span> e <span>carinho</span> por meio do conhecimento
+        </h3>
+        <p class="containerInfo__paragraph">
+          Todas as informações para melhorar a vida do seu pet em um só lugar
+        </p>
+        <div class="containerInfo__imageLogin">
+          <img src="./src/assets/img-login.jpg" alt="img-login" />
+        </div>
+      </section>
+      <section class="containerLogin">
+        <h2 class="containerLogin__title">Login</h2>
+        <h3 class="containerLogin__inputTitle">Email</h3>
+        <input
+       
+          class="containerLogin__input"
+          type="email"
+          placeholder="digite seu email aqui"
+          name="email"
+        />
+        <h3 class="containerLogin__inputTitle">Senha</h3>
+        <input
+        
+          class="containerLogin__input"
+          type="password"
+          placeholder="digite sua senha aqui"
+          name="password"
+        />
+        <button class="confirm__button">Acessar</button>
+        <div class="containerCadastre">
+          <h3 class="containerCadastre__titleCount">Ainda não possui conta?</h3>
+          <p class="containerCadastre__titleCount--reference">
+            Clicando no botão abaixo, você pode se cadastrar rapidamente
+          </p>
+          <button class="redirect-edit__button">Cadastrar</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/scripts/requests.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="./src/scripts/index.js"></script>
+  </body>
+</html>
