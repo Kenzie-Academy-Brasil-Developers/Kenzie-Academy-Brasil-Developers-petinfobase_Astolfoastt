@@ -3,7 +3,7 @@ import { login } from "./requests.js";
 import { toasts } from "./toasts.js";
 const red = "#df1545";
 
-function handleLoginUser() {
+function handleLogin() {
   const inputs = document.querySelectorAll(".containerLogin__input");
   const button = document.querySelector(".confirm__button");
   let loginBody = {};
@@ -35,5 +35,5 @@ const buttonCadastre = () => {
     location.replace("./src/pages/signup.html");
   });
 };
-handleLoginUser();
+handleLogin();
 buttonCadastre();

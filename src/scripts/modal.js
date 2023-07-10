@@ -36,28 +36,28 @@ const modalLogout = () => {
   modalContainer.appendChild(nameUser);
 };
 
-const modalEditPost = () => {
-  const buttonsEditPost = document.querySelectorAll(
-    ".containerButtonsHeader__buttonEditPost"
-  );
+// const modalEditPost = () => {
+//   const buttonsEditPost = document.querySelectorAll(
+//     ".containerButtonsHeader__buttonEditPost"
+//   );
 
-  buttonsEditPost.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modalContainer = document.querySelector(".modalContainerEdit");
+//   buttonsEditPost.forEach((button) => {
+//     button.addEventListener("click", () => {
+//       const modalContainer = document.querySelector(".modalContainerEdit");
 
-      if (!modalContainer.open) {
-        modalContainer.showModal();
-      }
-    });
-  });
+//       if (!modalContainer.open) {
+//         modalContainer.showModal();
+//       }
+//     });
+//   });
 
   const closeButton = document.querySelector(".containerHeader__buttonClose");
   closeButton.addEventListener("click", () => {
     const modalContainer = document.querySelector(".modalContainerEdit");
     modalContainer.close();
   });
-};
 
-modalEditPost();
+
+
 modalLogout();
 modalCreatePost();
