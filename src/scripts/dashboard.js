@@ -42,7 +42,6 @@ function addEventModalEditSaveButton() {
     };
 
     await editPost(id, body);
-    // await authenticUser()
     await createList();
   });
 }
@@ -54,7 +53,7 @@ function deletePost() {
 
   deleteButton.addEventListener("click", async (e) => {
     const id = deleteButton.dataset.postId;
-    console.log(id)
+    
     await deletePostById(id);
     await createList();
     if (deleteButton) {

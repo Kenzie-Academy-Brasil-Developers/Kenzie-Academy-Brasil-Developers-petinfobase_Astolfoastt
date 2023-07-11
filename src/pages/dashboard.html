@@ -22,7 +22,9 @@
         <button class="containerHeader__createPostButton confirm__button">
           Criar publicação
         </button>
-        <button class="buttonLogout"></button>
+        <button class="buttonLogout">
+        
+        </button>
         <dialog class="modalController">
           <div class="modalContainer">
             <div class="modalContainer__header">
@@ -51,10 +53,9 @@
             </div>
           </div>
         </dialog>
-        <div class="containerLogout"></div>
-      </div>
       <dialog class="modalControllerLogout modalEffectOpen">
         <div class="containerLogout">
+          <h3 class="modalContainerLogout__nameUser">@Astt420</h3>
           <button class="modalContainerLogout">
             <img src="../assets/img-logout.png" alt="imageLogout" />
           </button>
@@ -106,7 +107,15 @@
           <button class="alert__button deleteButton" type="button">Sim,excluir esse post</button>
         </div>
       </div>
-    </dialog>          
+    </dialog>
+    <dialog class="showPostModal">
+      <img class="modal__image" src="" alt="image profile">
+      <p class="modal__username"></p>
+      <p class="modal__createdAt"></p>
+      <h2 class="modal__title"></h2>
+      <p class="modal__content"></p>
+      <button class="modal__closeButton">Fechar</button>
+    </dialog>   
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"

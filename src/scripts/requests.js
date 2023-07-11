@@ -34,7 +34,6 @@ export async function login(loginBody) {
     .catch((err) => toasts(err.message, red));
   return token;
 }
-
 export async function createUser(resquetBody) {
   const newUser = await fetch(`${baseUrl}/users/create`, {
     method: "POST",
@@ -127,7 +126,6 @@ export async function authenticUser() {
       const resJson = await res.json();
       if (res.ok) {
         localStorage.setItem("@petInfo:postsIdUser", JSON.stringify(resJson));
-        toasts("Usuário autenticado com sucesso.", green);
         return resJson;
       } else {
         throw new Error(resJson.message);
@@ -160,20 +158,6 @@ export async function editPost(id, body) {
     .catch((err) => toasts(err.message, red));
   return post;
 }
-
-// export async function deletePost (id) {
-//   const token = JSON.parse(localStorage.getItem("@petInfo:token"));
-
-//   const response = await fetch(`${baseUrl}/posts/${id}`,{
-//     method: "DELETE",
-//     headers: {
-//     Authorization: `Bearer ${token}`
-//     },
-//   }).then((response) => response.json())
-
-//   return response;
-// }
-
 export async function deletePostById(id) {
   const token = localStorage.getItem("@petInfo:token");
   const post = await fetch(`${baseUrl}/posts/${id}`, {
