@@ -5,27 +5,6 @@ import { toasts } from "./toasts.js";
 
 const green = "#168821";
 
-// export const showPosts = () => {
-//   const posts = JSON.parse(localStorage.getItem("@petInfo:postsUsers"));
-//   return posts;
-// };
-
-// export const renderPosts = async () => {
-//   const postsData = showPosts();
-//   const containerItemList = document.querySelector(".container__itemList");
-
-//   if (postsData) {
-//     containerItemList.innerHTML = "";
-
-//     postsData.forEach((post) => {
-//       const card = createCard(post);
-//       containerItemList.appendChild(card);
-//     });
-//   }
-// };
-
-// posts();
-
 function createInPost() {
   const inputs = document.querySelectorAll(".inputsCreate");
   const button = document.querySelector(".button__signup");

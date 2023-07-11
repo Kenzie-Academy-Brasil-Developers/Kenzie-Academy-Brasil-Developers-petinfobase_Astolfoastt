@@ -1,5 +1,4 @@
 import { posts } from "./requests.js";
-import { authenticUserId } from "./dashboard.js";
 const contador = 10;
 
 async function createList() {
@@ -62,40 +61,36 @@ async function createList() {
 
       accessModal.classList.add("containerContent__accessModal");
       accessModal.innerText = "Acessar publicação";
-
+      
       ul.appendChild(itemList);
       itemList.append(container, containerButtons, containerContent);
       container.append(containerHeader);
       containerHeader.append(containerProfile, containerButtons);
-      containerProfile.append(imageList, nameUser, cardDate);
       containerButtons.append(buttonEdit, buttonClear);
+      containerProfile.append(imageList, nameUser, cardDate);
       containerContent.append(titlePost, contentPost, accessModal);
-
+      
       buttonEdit.addEventListener("click", () => {
         const modalContainer = document.querySelector(".modalContainerEdit");
         const inputTitle = document.querySelector(
           ".containerContentEdit__inputTitle"
-        );
-        const inputContent = document.querySelector(
-          ".containerContentEdit__inputContent"
-        );
-        const buttonSave = document.querySelector(
+          );
+          const inputContent = document.querySelector(
+            ".containerContentEdit__inputContent"
+            );
+            const buttonSave = document.querySelector(
           ".containerButtonsHeader__buttonEditPost"
         );
 
         buttonSave.dataset.postId = post.id;
 
-        inputTitle.value = post.title;
-        inputContent.value = post.content;
+        inputTitle.value = title;
+        inputContent.value = content;
 
         if (!modalContainer.open) {
           modalContainer.showModal();
         }
       });
-      const idData = authenticUserId();
-      if (user.id !== idData.id) {
-        containerButtons.style.display = "none";
-      }
       return ul;
     }
   });
