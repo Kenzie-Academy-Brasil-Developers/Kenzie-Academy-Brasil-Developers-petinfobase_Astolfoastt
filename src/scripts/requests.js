@@ -4,6 +4,7 @@ const baseUrl = `http://localhost:3333`;
 const green = "#168821";
 const red = "#df1545";
 
+
 export async function login(loginBody) {
   const token = await fetch(`${baseUrl}/login`, {
     method: "POST",
@@ -157,6 +158,5 @@ export async function editPost(id, body) {
       }
     })
     .catch((err) => toasts(err.message, red));
-
   return post;
 }

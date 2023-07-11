@@ -1,6 +1,7 @@
-import { posts } from "./requests.js";
+import {createList} from "./render.js"
 import { createPosts } from "./requests.js";
 import { editPost } from "./requests.js";
+
 import { toasts } from "./toasts.js";
 
 const green = "#168821";
@@ -25,26 +26,27 @@ export const authenticUserId = () => {
 };
 
 
-function addEventModalEditSaveButton(id, body) {
-  const button = document.querySelector(".containerRedirectEdit__save");
+function addEventModalEditSaveButton() {
+  const buttonSave = document.querySelector(".containerRedirectEdit__save");
 
-  button.addEventListener("click", async () => {
-    const inputTitle = document.querySelector(
-      ".containerContentEdit__inputTitle"
-    );
-    const inputContent = document.querySelector(
-      ".containerContentEdit__inputContent"
-    );
+  buttonSave.addEventListener("click", async () => {
+    const inputTitle = document.querySelector(".containerContentEdit__inputTitle");
+    const inputContent = document.querySelector(".containerContentEdit__inputContent");
 
-    id = button.dataset.id;
+    const id = buttonSave.dataset.postId; // Corrigido para buttonSave.dataset.postId
 
-    body = {
+    const body = {
       title: inputTitle.value,
       content: inputContent.value,
     };
-   await editPost(id, body);
+
+    await editPost(id, body);
+    // await authenticUser()
+    await createList();
   });
 }
+
+addEventModalEditSaveButton();
 
 const buttonLogout = () => {
   const button = document.querySelector(".modalContainerLogout");
@@ -62,6 +64,5 @@ const buttonLogout = () => {
 };
 
 buttonLogout();
-addEventModalEditSaveButton();
 createInPost();
-// renderPosts();
+

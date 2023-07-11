@@ -1,7 +1,7 @@
 import { posts } from "./requests.js";
 const contador = 10;
 
-async function createList() {
+export async function createList() {
   const postsUser = await posts();
   const ul = document.querySelector(".container__itemList");
 
@@ -45,7 +45,8 @@ async function createList() {
       buttonEdit.classList.add("containerButtonsHeader__buttonEditPost");
       buttonEdit.id = "buttonEdit";
       buttonEdit.innerText = "Editar";
-      buttonEdit.dataset.postId = id;
+      // buttonEdit.dataset.postId = id;
+     
 
       buttonClear.classList.add("containerButtonsHeader__buttonClearPost");
       buttonClear.id = "buttonClear";
@@ -70,6 +71,8 @@ async function createList() {
       containerProfile.append(imageList, nameUser, cardDate);
       containerContent.append(titlePost, contentPost, accessModal);
       
+      
+
       buttonEdit.addEventListener("click", () => {
         const modalContainer = document.querySelector(".modalContainerEdit");
         const inputTitle = document.querySelector(
@@ -79,10 +82,12 @@ async function createList() {
             ".containerContentEdit__inputContent"
             );
             const buttonSave = document.querySelector(
-          ".containerButtonsHeader__buttonEditPost"
+          ".containerRedirectEdit__save"
         );
 
-        buttonSave.dataset.postId = post.id;
+        buttonSave.dataset.postId = id;
+        console.log(buttonSave);
+        
 
         inputTitle.value = title;
         inputContent.value = content;
@@ -96,3 +101,4 @@ async function createList() {
   });
 }
 await createList();
+
