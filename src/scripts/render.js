@@ -1,4 +1,4 @@
-import { posts } from "./requests.js";
+import { authenticUser, posts } from "./requests.js";
 const contador = 10;
 
 export async function createList() {
@@ -45,12 +45,13 @@ export async function createList() {
       buttonEdit.classList.add("containerButtonsHeader__buttonEditPost");
       buttonEdit.id = "buttonEdit";
       buttonEdit.innerText = "Editar";
-      // buttonEdit.dataset.postId = id;
+      buttonEdit.dataset.postId = id;
      
 
       buttonClear.classList.add("containerButtonsHeader__buttonClearPost");
       buttonClear.id = "buttonClear";
       buttonClear.innerText = "Excluir";
+      buttonEdit.dataset.postId = id;
 
       containerContent.classList.add("containerContent");
 
@@ -71,7 +72,9 @@ export async function createList() {
       containerProfile.append(imageList, nameUser, cardDate);
       containerContent.append(titlePost, contentPost, accessModal);
       
-      
+      // if(!authenticUser.id){
+      //   containerButtons.style.display = "none"
+      // }
 
       buttonEdit.addEventListener("click", () => {
         const modalContainer = document.querySelector(".modalContainerEdit");
@@ -96,6 +99,12 @@ export async function createList() {
           modalContainer.showModal();
         }
       });
+      buttonClear.addEventListener("click", () => {
+        const deleteButton = document.querySelector(".deleteButton")
+        const deleteModal = document.querySelector(".modalDelete");
+        deleteButton.dataset.postId = id
+        deleteModal.showModal();
+      })
       return ul;
     }
   });

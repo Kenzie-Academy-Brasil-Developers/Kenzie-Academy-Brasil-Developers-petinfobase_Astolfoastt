@@ -1,6 +1,7 @@
 import {createList} from "./render.js"
 import { createPosts } from "./requests.js";
 import { editPost } from "./requests.js";
+import { deletePostById } from "./requests.js";
 
 import { toasts } from "./toasts.js";
 
@@ -33,7 +34,7 @@ function addEventModalEditSaveButton() {
     const inputTitle = document.querySelector(".containerContentEdit__inputTitle");
     const inputContent = document.querySelector(".containerContentEdit__inputContent");
 
-    const id = buttonSave.dataset.postId; // Corrigido para buttonSave.dataset.postId
+    const id = buttonSave.dataset.postId; 
 
     const body = {
       title: inputTitle.value,
@@ -46,23 +47,45 @@ function addEventModalEditSaveButton() {
   });
 }
 
-addEventModalEditSaveButton();
+function deletePost() {
+  const deleteButton = document.querySelector(".deleteButton");
+  const deleteCancelButtons = document.querySelectorAll(".close-Modal");
+  const deleteModal = document.querySelector(".modalDelete");
+
+  deleteButton.addEventListener("click", async (e) => {
+    const id = deleteButton.dataset.postId;
+    console.log(id)
+    await deletePostById(id);
+    await createList();
+    if (deleteButton) {
+      deleteModal.close();
+    }
+  });
+
+  deleteCancelButtons.forEach((buttons) => {
+    buttons.addEventListener("click", () => {
+      deleteModal.close();
+    });
+  });
+}
 
 const buttonLogout = () => {
   const button = document.querySelector(".modalContainerLogout");
-
+  
   button.addEventListener("click", (event) => {
     event.preventDefault();
     toasts(
       "Usuário desconectado com sucesso, você será redirecionado à página de login",
       green
-    );
-    setTimeout(() => {
-      location.replace("../../index.html");
-    }, 3000);
-  });
-};
+      );
+      setTimeout(() => {
+        location.replace("../../index.html");
+      }, 3000);
+    });
+  };
 
+deletePost();
 buttonLogout();
+addEventModalEditSaveButton();
 createInPost();
 

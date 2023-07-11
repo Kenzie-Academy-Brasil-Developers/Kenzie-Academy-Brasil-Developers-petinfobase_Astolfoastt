@@ -160,3 +160,37 @@ export async function editPost(id, body) {
     .catch((err) => toasts(err.message, red));
   return post;
 }
+
+// export async function deletePost (id) {
+//   const token = JSON.parse(localStorage.getItem("@petInfo:token"));
+
+//   const response = await fetch(`${baseUrl}/posts/${id}`,{
+//     method: "DELETE",
+//     headers: {
+//     Authorization: `Bearer ${token}`
+//     },
+//   }).then((response) => response.json())
+
+//   return response;
+// }
+
+export async function deletePostById(id) {
+  const token = localStorage.getItem("@petInfo:token");
+  const post = await fetch(`${baseUrl}/posts/${id}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then(async (response) => {
+      const responseJson = await response.json();
+      if (response.ok) {
+        toasts("Post deletado com sucesso", green);
+        return responseJson;
+      } else {
+        throw new Error(responseJson.message);
+      }
+    })
+    .catch((err) => toasts(err.message, red));
+  return post;
+}
