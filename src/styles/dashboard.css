@@ -125,3 +125,6 @@
   margin-bottom: 20px;
 }
 
+.container__itemList {
+  max-width: 95%;
+}

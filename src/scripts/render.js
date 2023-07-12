@@ -136,5 +136,4 @@ export async function createList() {
 
   return ul;
 }
-
 await createList();

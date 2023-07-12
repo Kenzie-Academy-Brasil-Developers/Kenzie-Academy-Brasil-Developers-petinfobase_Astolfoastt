@@ -22,8 +22,8 @@
         <button class="containerHeader__createPostButton confirm__button">
           Criar publicação
         </button>
-        <button class="buttonLogout">
-        
+        <button class="buttonLogout close-cancel__button">
+          Sair
         </button>
         <dialog class="modalController">
           <div class="modalContainer">
@@ -55,7 +55,7 @@
         </dialog>
       <dialog class="modalControllerLogout modalEffectOpen">
         <div class="containerLogout">
-          <h3 class="modalContainerLogout__nameUser">@Astt420</h3>
+          <h3 class="modalContainerLogout__nameUser">clique aqui para sair</h3>
           <button class="modalContainerLogout">
             <img src="../assets/img-logout.png" alt="imageLogout" />
           </button>
@@ -89,7 +89,7 @@
       </div>
       <div class="containerRedirectEdit">
         <button class="containerRedirectEdit__cancel">Cancelar</button>
-        <button  class="containerRedirectEdit__save">
+        <button  class="containerRedirectEdit__save confirm__button">
           Salvar alterações
         </button>
       </div>
@@ -100,8 +100,8 @@
           <h2>Confirmar exlusão</h2>
           <button type="button" class="close-Modal close-cancel__button" >X</button>
         </div >
-        <h2>Tem ceteza que deseja excluir esse post?</h2>
-        <span>Essa ação não poderá ser desfeita, então pedimos que tenha cautela anters de concluir </span>
+        <h2 class="modalDelete__title">Tem ceteza que deseja excluir esse post?</h2>
+        <span class="modalDelete__span">Essa ação não poderá ser desfeita, então pedimos que tenha cautela anters de concluir </span>
         <div class="modalDelete__buttons">
           <button class=" close-Modal close-cancel__button" type="button">Cancelar</button>
           <button class="alert__button deleteButton" type="button">Sim,excluir esse post</button>
