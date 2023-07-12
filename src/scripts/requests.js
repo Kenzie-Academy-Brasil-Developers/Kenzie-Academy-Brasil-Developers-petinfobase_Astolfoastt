@@ -166,6 +166,7 @@ export async function editPost(id, body) {
     .catch((err) => toasts(err.message, red));
   return post;
 }
+
 export async function deletePostById(id) {
   const token = localStorage.getItem("@petInfo:token");
   const post = await fetch(`${baseUrl}/posts/${id}`, {

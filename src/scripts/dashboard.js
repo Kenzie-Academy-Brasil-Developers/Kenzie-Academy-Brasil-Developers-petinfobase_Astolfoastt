@@ -12,7 +12,7 @@ function createInPost() {
   const button = document.querySelector(".button__signup");
   let newPost = {};
   button.addEventListener("click", (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     inputs.forEach((input) => {
       newPost[input.name] = input.value;

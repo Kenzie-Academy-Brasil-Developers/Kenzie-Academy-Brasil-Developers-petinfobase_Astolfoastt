@@ -113,7 +113,6 @@ export async function createList() {
           );
 
           buttonSave.dataset.postId = id;
-          console.log(buttonSave);
 
           inputTitle.value = title;
           inputContent.value = content;

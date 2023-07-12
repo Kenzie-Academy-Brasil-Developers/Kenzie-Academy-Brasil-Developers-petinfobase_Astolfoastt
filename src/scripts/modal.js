@@ -42,5 +42,16 @@ closeButton.addEventListener("click", () => {
   modalContainer.close();
 });
 
+const closeModalEditButtonCancel = () =>  {
+
+  const closeButtonModalEdit = document.querySelector(".containerRedirectEdit__cancel");
+  closeButtonModalEdit.addEventListener("click", () => {
+    const modalContainer = document.querySelector(".modalContainerEdit");
+    modalContainer.close()
+  })
+}
+
+
+closeModalEditButtonCancel()
 modalLogout();
 modalCreatePost();
