@@ -7,7 +7,7 @@ export async function createList() {
 
   ul.innerHTML = "";
 
-  const loggedInUser = await authenticUser(); 
+  const loggedInUser = await authenticUser();
 
   postsUser.forEach((post, index) => {
     if (index > contador) {
@@ -84,7 +84,6 @@ export async function createList() {
       containerProfile.append(imageList, nameUser, cardDate);
       containerContent.append(titlePost, contentPost, accessModal);
 
-    
       if (loggedInUser && post.user.id === loggedInUser.id) {
         const buttonEdit = document.createElement("button");
         const buttonClear = document.createElement("button");
@@ -133,7 +132,6 @@ export async function createList() {
       }
     }
   });
-
   return ul;
 }
 await createList();

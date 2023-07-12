@@ -1,9 +1,9 @@
 import { toasts } from "./toasts.js";
+const spinner = document.querySelector(".spinner");
 
 const baseUrl = `http://localhost:3333`;
 const green = "#168821";
 const red = "#df1545";
-
 
 export async function login(loginBody) {
   const token = await fetch(`${baseUrl}/login`, {
@@ -23,6 +23,7 @@ export async function login(loginBody) {
           "Usuário logado com sucesso, você será redirecionado a dashboard!",
           green
         );
+        spinner.classList.remove("hidden");
         setTimeout(() => {
           location.replace("./src/pages/dashboard.html");
         }, 2000);
@@ -31,7 +32,10 @@ export async function login(loginBody) {
         throw new Error(resJson.message);
       }
     })
-    .catch((err) => toasts(err.message, red));
+    .catch((err) => {
+      spinner.classList.add("hidden");
+      toasts(err.message, red);
+    });
   return token;
 }
 export async function createUser(resquetBody) {
@@ -49,6 +53,7 @@ export async function createUser(resquetBody) {
           "Usuário criado com sucesso, você será redirecionado a página de login!",
           green
         );
+        spinner.classList.remove("hidden");
         setTimeout(() => {
           location.replace("../../index.html");
         }, 3000);
@@ -57,7 +62,10 @@ export async function createUser(resquetBody) {
         throw new Error(resJson.message);
       }
     })
-    .catch((err) => toasts(err.message, red));
+    .catch((err) => {
+      spinner.classList.add("hidden");
+      toasts(err.message, red);
+    });
 
   return newUser;
 }

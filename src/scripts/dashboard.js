@@ -1,4 +1,4 @@
-import {createList} from "./render.js"
+import { createList } from "./render.js";
 import { createPosts } from "./requests.js";
 import { editPost } from "./requests.js";
 import { deletePostById } from "./requests.js";
@@ -12,7 +12,7 @@ function createInPost() {
   const button = document.querySelector(".button__signup");
   let newPost = {};
   button.addEventListener("click", (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     inputs.forEach((input) => {
       newPost[input.name] = input.value;
@@ -26,15 +26,18 @@ export const authenticUserId = () => {
   return userId;
 };
 
-
 function addEventModalEditSaveButton() {
   const buttonSave = document.querySelector(".containerRedirectEdit__save");
 
   buttonSave.addEventListener("click", async () => {
-    const inputTitle = document.querySelector(".containerContentEdit__inputTitle");
-    const inputContent = document.querySelector(".containerContentEdit__inputContent");
+    const inputTitle = document.querySelector(
+      ".containerContentEdit__inputTitle"
+    );
+    const inputContent = document.querySelector(
+      ".containerContentEdit__inputContent"
+    );
 
-    const id = buttonSave.dataset.postId; 
+    const id = buttonSave.dataset.postId;
 
     const body = {
       title: inputTitle.value,
@@ -53,7 +56,7 @@ function deletePost() {
 
   deleteButton.addEventListener("click", async (e) => {
     const id = deleteButton.dataset.postId;
-    
+
     await deletePostById(id);
     await createList();
     if (deleteButton) {
@@ -70,21 +73,20 @@ function deletePost() {
 
 const buttonLogout = () => {
   const button = document.querySelector(".modalContainerLogout");
-  
+
   button.addEventListener("click", (event) => {
     event.preventDefault();
     toasts(
       "Usuário desconectado com sucesso, você será redirecionado à página de login",
       green
-      );
-      setTimeout(() => {
-        location.replace("../../index.html");
-      }, 3000);
-    });
-  };
+    );
+    setTimeout(() => {
+      location.replace("../../index.html");
+    }, 1500);
+  });
+};
 
 deletePost();
 buttonLogout();
 addEventModalEditSaveButton();
 createInPost();
-

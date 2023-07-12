@@ -15,19 +15,27 @@ function handleNewUser() {
 
 const buttonReturn = () => {
   const button = document.querySelector(".close-cancel__button");
+  const spinner = document.querySelector(".hidden");
 
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    location.replace("../../index.html");
+    spinner.classList.remove("hidden");
+    setTimeout(() => {
+      location.replace("../../index.html");
+    }, 3000);
   });
 };
 
 const buttonReturnLast = () => {
   const button = document.querySelector(".returnButtonLogin");
+  const spinner = document.querySelector(".hidden");
 
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    location.replace("../../index.html");
+    spinner.classList.remove("hidden");
+    setTimeout(() => {
+      location.replace("../../index.html");
+    }, 3000);
   });
 };
 buttonReturnLast();

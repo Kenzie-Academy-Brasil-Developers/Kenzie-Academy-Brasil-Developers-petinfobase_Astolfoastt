@@ -29,10 +29,13 @@ function handleLogin() {
 
 const buttonCadastre = () => {
   const button = document.querySelector(".redirect-edit__button");
-
+  const spinner = document.querySelector(".spinner");
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    location.replace("./src/pages/signup.html");
+    spinner.classList.remove("hidden");
+    setTimeout(() => {
+      location.replace("./src/pages/signup.html");
+    }, 3000);
   });
 };
 handleLogin();

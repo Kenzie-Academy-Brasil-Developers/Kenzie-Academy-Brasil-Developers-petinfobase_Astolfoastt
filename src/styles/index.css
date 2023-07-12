@@ -93,6 +93,35 @@
   color: var(--gray300);
   font-size: 0.85rem;
 }
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50, 50);
+  margin-top: 2rem;
+
+  height: 50px;
+  width: 50px;
+
+  border-top: 5px solid blue;
+  border-radius: 100%;
+
+  animation: spin 0.5s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media screen and (max-width: 1100px) {
   .container {

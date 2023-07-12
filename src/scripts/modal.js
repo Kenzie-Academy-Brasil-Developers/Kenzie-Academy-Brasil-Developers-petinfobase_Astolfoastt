@@ -5,11 +5,21 @@ const modalCreatePost = () => {
   button.addEventListener("click", () => {
     modalContainer.showModal();
     closeModalCreatePost();
+    closeButtonCreate();
   });
 };
 
 const closeModalCreatePost = () => {
   const button = document.querySelector(".modalContainer__buttonClose");
+  const modalContainer = document.querySelector(".modalController");
+
+  button.addEventListener("click", () => {
+    modalContainer.close();
+  });
+};
+
+const closeButtonCreate = () => {
+  const button = document.querySelector(".buttonCloseModal");
   const modalContainer = document.querySelector(".modalController");
 
   button.addEventListener("click", () => {
@@ -26,11 +36,11 @@ const modalLogout = () => {
   });
 };
 
-  const closeButton = document.querySelector(".containerHeader__buttonClose");
-  closeButton.addEventListener("click", () => {
-    const modalContainer = document.querySelector(".modalContainerEdit");
-    modalContainer.close();
-  });
+const closeButton = document.querySelector(".containerHeader__buttonClose");
+closeButton.addEventListener("click", () => {
+  const modalContainer = document.querySelector(".modalContainerEdit");
+  modalContainer.close();
+});
 
 modalLogout();
 modalCreatePost();

@@ -16,6 +16,7 @@
     <title>Petinfo</title>
   </head>
   <body>
+    <div class="spinner hidden"></div>
     <header class="containerHeaderButtons">
       <h1 class="containerHeader__logo">Petinfo</h1>
       <div>
@@ -40,22 +41,22 @@
                 placeholder="Digite o título aqui..."
               />
               <h3>Conteúdo do post</h3>
-              <input
-                class="inputsCreate"
-                name="content"
-                type="text"
-                placeholder="Digite o conteúdo do post aqui..."
-              />
+              <textarea  class="inputsCreate inputContentCreate"
+              name="content"
+              type="text"
+              placeholder="Digite o conteúdo do post aqui...">
+              
+              </textarea>
             </div>
             <div class="modalContainer__redirectButtons">
-              <button class="close-cancel__button">Cancelar</button>
+              <button class="close-cancel__button buttonCloseModal">Cancelar</button>
               <button class="confirm__button button__signup">Publicar</button>
             </div>
           </div>
         </dialog>
       <dialog class="modalControllerLogout modalEffectOpen">
         <div class="containerLogout">
-          <h3 class="modalContainerLogout__nameUser">clique aqui para sair</h3>
+          <h3 class="modalContainerLogout__nameUser">Clique aqui para sair:</h3>
           <button class="modalContainerLogout">
             <img src="../assets/img-logout.png" alt="imageLogout" />
           </button>
@@ -81,11 +82,11 @@
           name="title"
         />
         <h3 class="containerContentEdit__title">Conteúdo do post</h3>
-        <input
-          class="containerContentEdit__inputContent"
-          type="text"
-          name="content"
-        />
+        <textarea class="containerContentEdit__inputContent"
+        type="text"
+        name="content">
+      
+        </textarea>
       </div>
       <div class="containerRedirectEdit">
         <button class="containerRedirectEdit__cancel">Cancelar</button>
